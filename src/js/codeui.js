@@ -1,6 +1,13 @@
+import React from "react";
+
 function Codeui(props) {
-  return <h1>hello {props} from codeui</h1>;
-  // return "Hello " + props.name + " from codeui";
+  return (
+    <pre>
+      <code>
+        <div>{props.data}</div>
+      </code>
+    </pre>
+  );
 }
 
 export default Codeui;

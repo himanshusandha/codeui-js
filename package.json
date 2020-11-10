@@ -2,16 +2,29 @@
   "name": "codeui-js",
   "version": "0.0.1",
   "description": "A full-featured node package providing code editor ui to be embedded in webpages/webapps.",
-  "main": "index.js",
+  "main": "./src/index.js",
   "type": "module",
+  "private": false,
   "homepage": "https://github.com/himanshusandha/codeui-js",
   "repository": {
     "type": "git",
     "url": "https://github.com/himanshusandha/codeui-js.git"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-react": "^7.12.5"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "scripts": {
+    "compile": "rm -rf dist && mkdir dist &&  babel ./src -d dist/src --copy-files && cp LICENSE package.json README.md ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
