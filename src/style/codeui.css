@@ -1,0 +1,11 @@
+.codeui-base {
+  background-color: rgb(1, 22, 39);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: rgb(214, 222, 235);
+  display: block;
+  overflow-y: hidden;
+  overflow-x: visible;
+  padding: 1rem;
+  line-height: 1.6;
+}
