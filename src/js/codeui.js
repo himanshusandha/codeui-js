@@ -10,6 +10,12 @@ function Codeui(props) {
       <code className="codeui-code-tag">
         <div>{props.data}</div>
       </code>
+      {props.fileName && (
+        <div className="codeui-fileName" contentEditable={false}>
+          <div>{props.fileName}</div>
+          <div>Made with &#9829; by Himanshu Sandha</div>
+        </div>
+      )}
     </pre>
   );
 }
