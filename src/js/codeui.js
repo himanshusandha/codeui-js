@@ -8,7 +8,14 @@ function Codeui(props) {
       contentEditable={props.contentEditable ? props.contentEditable : false}
     >
       <code className="codeui-code-tag">
-        <div>{props.data}</div>
+        {props.data &&
+          props.data.split(/\r?\n/).map((field, idx) => {
+            return (
+              <div key={idx} className="codeui-code-div-tag">
+                <span className="codeui-code-span-tag">{field}</span>
+              </div>
+            );
+          })}
       </code>
       {props.fileName && (
         <div className="codeui-fileName" contentEditable={false}>
