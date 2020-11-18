@@ -11,7 +11,19 @@ function Codeui(props) {
         {props.data &&
           props.data.split(/\r?\n/).map((field, idx) => {
             return (
-              <div key={idx} className="codeui-code-div-tag">
+              <div
+                key={idx}
+                className={`codeui-code-div-tag ${
+                  props.lineNumbering === false ? "" : "codeui-line-number"
+                } ${
+                  props.lineToHighlight &&
+                  props.lineToHighlight
+                    .split(/\r?,/)
+                    .includes((idx + 1).toString())
+                    ? "codeui-highlight"
+                    : "codeui-no-highlight"
+                }`}
+              >
                 <span className="codeui-code-span-tag">{field}</span>
               </div>
             );

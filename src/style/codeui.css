@@ -16,7 +16,7 @@
   font-family: monospace;
 }
 
-.codeui-code-div-tag:before {
+.codeui-line-number:before {
   counter-increment: line;
   content: counter(line);
   padding: 0 0.5rem;
@@ -40,4 +40,9 @@
 .codeui-highlight {
   background-color: rgb(2, 42, 75);
   border-left: 0.3em solid rgb(239, 83, 80);
+}
+
+.codeui-no-highlight {
+  /*just a fix for padding*/
+  margin-left: 0.3em;
 }
