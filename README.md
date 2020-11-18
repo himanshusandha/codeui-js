@@ -12,4 +12,7 @@ A full-featured node package providing code editor ui to be embedded in webpages
 
 # Features
 
-1.
+1. Line Number
+2. File name
+3. Toogle code editing
+4. Syntax Highlight
