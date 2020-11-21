@@ -2,10 +2,20 @@ import React from "react";
 import "../style/codeui.css";
 
 function Codeui(props) {
+  const preTagInlineStyle = {
+    whiteSpace: props.wrap === true ? "pre-wrap" : "",
+    borderRadius: props.borderRadius,
+    lineHeight: props.lineHeight,
+    fontSize: props.fontSize,
+    backgroundColor: props.backgroundColor,
+    color: props.textColor,
+  };
+
   return (
     <pre
       className="codeui-base"
       contentEditable={props.contentEditable ? props.contentEditable : false}
+      style={preTagInlineStyle}
     >
       <code className="codeui-code-tag">
         {props.data &&

@@ -15,4 +15,6 @@ A full-featured node package providing code editor ui to be embedded in webpages
 1. Line Number
 2. File name
 3. Toogle code editing
-4. Syntax Highlight
+4. Line Highlight
+5. Customizing style properties
+6. Theme Selection
