@@ -11,6 +11,11 @@ function Codeui(props) {
     color: props.textColor,
   };
 
+  const codeDivHighlightInlineStyle = {
+    backgroundColor: props.highlighterColor,
+    borderLeftColor: props.highlighterLeftColor,
+  };
+
   return (
     <pre
       className="codeui-base"
@@ -33,6 +38,22 @@ function Codeui(props) {
                     ? "codeui-highlight"
                     : "codeui-no-highlight"
                 }`}
+                style={{
+                  backgroundColor:
+                    props.lineToHighlight &&
+                    props.lineToHighlight
+                      .split(/\r?,/)
+                      .includes((idx + 1).toString())
+                      ? codeDivHighlightInlineStyle.backgroundColor
+                      : "",
+                  borderLeftColor:
+                    props.lineToHighlight &&
+                    props.lineToHighlight
+                      .split(/\r?,/)
+                      .includes((idx + 1).toString())
+                      ? codeDivHighlightInlineStyle.borderLeftColor
+                      : "",
+                }}
               >
                 <span className="codeui-code-span-tag">{field}</span>
               </div>
