@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/codeui.css";
+import theme from "./theme";
 
 function Codeui(props) {
   const preTagInlineStyle = {
@@ -15,6 +16,15 @@ function Codeui(props) {
     backgroundColor: props.highlighterColor,
     borderLeftColor: props.highlighterLeftColor,
   };
+
+  if (props.theme && theme[props.theme]) {
+    preTagInlineStyle.backgroundColor = theme[props.theme].backgroundColor;
+    preTagInlineStyle.color = theme[props.theme].textColor;
+    codeDivHighlightInlineStyle.backgroundColor =
+      theme[props.theme].highlighterColor;
+    codeDivHighlightInlineStyle.borderLeftColor =
+      theme[props.theme].highlighterLeftColor;
+  }
 
   return (
     <pre

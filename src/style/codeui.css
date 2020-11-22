@@ -30,7 +30,7 @@
   padding-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  color: rgb(214, 222, 235);
+  /* color: rgb(214, 222, 235); */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
